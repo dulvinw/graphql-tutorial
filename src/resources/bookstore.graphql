@@ -17,6 +17,10 @@ input BookInput {
     category: String!
 }
 
+input AuthorInput {
+    name: String!
+}
+
 type Query {
     books: [Book!]!
     book(id: ID!): Book
@@ -28,4 +32,5 @@ type Mutation {
     addBook(input: BookInput!): Book!
     updateBook(id: ID!, input: BookInput!): Book!
     deleteBook(id: ID!): ID!
+    addAuthor(input: AuthorInput!): Author!
 }
